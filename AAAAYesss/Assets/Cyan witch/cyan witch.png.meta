@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: 05043e6063194da4c9394c091d3b9fd0
+timeCreated: 1454102880
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cyan witch_0
+    21300002: cyan witch_1
+    21300004: cyan witch_2
+    21300006: cyan witch_3
+    21300008: cyan witch_4
+    21300010: cyan witch_5
+    21300012: cyan witch_6
+    21300014: cyan witch_7
+    21300016: cyan witch_8
+    21300018: cyan witch_9
+    21300020: cyan witch_10
+    21300022: cyan witch_11
+    21300024: cyan witch_12
+    21300026: cyan witch_13
+    21300028: cyan witch_14
+    21300030: cyan witch_15
+    21300032: cyan witch_16
+    21300034: cyan witch_17
+    21300036: cyan witch_18
+    21300038: cyan witch_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cyan witch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 16}
+        - {x: -10, y: 5}
+        - {x: -10, y: -16}
+        - {x: 8, y: -16}
+        - {x: 9, y: -12}
+        - {x: 9, y: 5}
+        - {x: 3, y: 16}
+    - name: cyan witch_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 13}
+        - {x: -9, y: 13}
+        - {x: -9, y: -13}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 8}
+        - {x: 9, y: 9}
+    - name: cyan witch_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 16}
+        - {x: -10, y: 5}
+        - {x: -10, y: -16}
+        - {x: 8, y: -16}
+        - {x: 9, y: -12}
+        - {x: 9, y: 5}
+        - {x: 3, y: 16}
+    - name: cyan witch_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 13}
+        - {x: -9, y: 8}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 11}
+        - {x: 9, y: 13}
+    - name: cyan witch_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 16}
+        - {x: -1, y: 16}
+        - {x: -3, y: 15}
+        - {x: -10, y: 4}
+        - {x: -10, y: -10}
+        - {x: -8, y: -16}
+        - {x: 7, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: 5}
+    - name: cyan witch_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 15}
+        - {x: -10, y: 6}
+        - {x: -10, y: -11}
+        - {x: -9, y: -15}
+        - {x: -8, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: 1}
+        - {x: 2, y: 15}
+    - name: cyan witch_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 16}
+        - {x: -1, y: 16}
+        - {x: -3, y: 15}
+        - {x: -10, y: 4}
+        - {x: -10, y: -10}
+        - {x: -8, y: -16}
+        - {x: 7, y: -16}
+        - {x: 9, y: -15}
+        - {x: 9, y: 5}
+    - name: cyan witch_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 15}
+        - {x: -10, y: 6}
+        - {x: -10, y: -11}
+        - {x: -9, y: -15}
+        - {x: -8, y: -16}
+        - {x: 9, y: -16}
+        - {x: 9, y: 1}
+        - {x: 2, y: 15}
+    - name: cyan witch_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 16}
+        - {x: -2, y: 15}
+        - {x: -9, y: 4}
+        - {x: -9, y: -10}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -10}
+        - {x: 10, y: 6}
+        - {x: 2, y: 16}
+    - name: cyan witch_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 13}
+        - {x: -10, y: 5}
+        - {x: -10, y: -12}
+        - {x: -8, y: -16}
+        - {x: 8, y: -16}
+        - {x: 9, y: -13}
+        - {x: 9, y: 13}
+    - name: cyan witch_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 16}
+        - {x: -2, y: 15}
+        - {x: -9, y: 4}
+        - {x: -9, y: -10}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -10}
+        - {x: 10, y: 6}
+        - {x: 2, y: 16}
+    - name: cyan witch_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 13}
+        - {x: -10, y: 13}
+        - {x: -10, y: -14}
+        - {x: -7, y: -16}
+        - {x: 6, y: -16}
+        - {x: 9, y: -13}
+        - {x: 9, y: 7}
+    - name: cyan witch_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 16}
+        - {x: 0, y: 16}
+        - {x: -2, y: 15}
+        - {x: -9, y: 4}
+        - {x: -9, y: -10}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -15}
+        - {x: 10, y: 5}
+    - name: cyan witch_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 11}
+        - {x: -2, y: 11}
+        - {x: -9, y: 5}
+        - {x: -9, y: -16}
+        - {x: 9, y: -16}
+        - {x: 10, y: -13}
+        - {x: 10, y: 5}
+    - name: cyan witch_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 16}
+        - {x: 0, y: 16}
+        - {x: -2, y: 15}
+        - {x: -9, y: 4}
+        - {x: -9, y: -10}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -15}
+        - {x: 10, y: 5}
+    - name: cyan witch_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 11}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 11}
+    - name: cyan witch_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 16}
+        - {x: -9, y: 5}
+        - {x: -9, y: -7}
+        - {x: -7, y: -14}
+        - {x: -5, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -10}
+        - {x: 10, y: 7}
+        - {x: 4, y: 16}
+    - name: cyan witch_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 13}
+        - {x: -2, y: 13}
+        - {x: -9, y: 5}
+        - {x: -9, y: -2}
+        - {x: -7, y: -14}
+        - {x: -2, y: -16}
+        - {x: 5, y: -16}
+        - {x: 8, y: -13}
+        - {x: 10, y: -4}
+        - {x: 10, y: 5}
+    - name: cyan witch_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 16}
+        - {x: -9, y: 5}
+        - {x: -9, y: -7}
+        - {x: -7, y: -14}
+        - {x: -5, y: -16}
+        - {x: 8, y: -16}
+        - {x: 10, y: -10}
+        - {x: 10, y: 7}
+        - {x: 4, y: 16}
+    - name: cyan witch_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 14}
+        - {x: -9, y: 5}
+        - {x: -9, y: -4}
+        - {x: -8, y: -14}
+        - {x: -6, y: -16}
+        - {x: 7, y: -16}
+        - {x: 10, y: -5}
+        - {x: 10, y: 5}
+        - {x: 2, y: 14}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
