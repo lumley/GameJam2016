@@ -11,6 +11,8 @@ public class MovePlayer : MonoBehaviour {
     private Animator playerAnimator;
     
     private int playerNumber;
+	private bool wasPickedUp = false;
+	private bool goSlower = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,11 @@ public class MovePlayer : MonoBehaviour {
         string playerIdentifier = "player" + playerNumber;
         var movement = new Vector3(Input.GetAxisRaw(playerIdentifier + "Horizontal"), Input.GetAxisRaw(playerIdentifier + "Vertical"));
         
+		if(goSlower){
+			speed=3.0f;
+		} else {
+			speed = 5.0f;
+		}
         movement = movement * speed * Time.deltaTime;
 
         playerRigidbody.MovePosition (transform.position + movement);
@@ -52,4 +59,24 @@ public class MovePlayer : MonoBehaviour {
         }
         
     }
+
+	void OnTriggerEnter2D(Collider2D other) 
+	{
+		// When the player picks up the item it is placed over his head
+		if (other.gameObject.CompareTag ("Pick Up") && !wasPickedUp)
+		{
+			goSlower = true;
+			wasPickedUp=true;
+		} 
+	}
+
+	void OnTriggerExit2D (Collider2D other) 
+	{
+		// When the player picks up the item it is placed over his head
+		if (other.gameObject.CompareTag ("Pick Up"))
+		{
+			goSlower = false;
+			wasPickedUp = false;
+		} 
+	}
 }
