@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ForcePush : MonoBehaviour {
     public float range;
+    public float strength;
     public int playerNumber;
 
     private Rigidbody2D playerRigidBody;
@@ -40,7 +41,7 @@ public class ForcePush : MonoBehaviour {
                 Rigidbody2D targetRigidBody = target.GetComponent<Rigidbody2D>();
                 if(targetRigidBody != null)
                 {
-                    targetRigidBody.AddForce(direction, ForceMode2D.Impulse);
+                    targetRigidBody.AddForce(direction * strength, ForceMode2D.Impulse);
                 }
             }
         }
