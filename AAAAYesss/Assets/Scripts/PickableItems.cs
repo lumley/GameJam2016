@@ -8,6 +8,8 @@ public class PickableItems : MonoBehaviour {
 	private float finalPositionx = 0f;
 	private float finalPositiony = 0f;
 
+	public bool IsPicked;
+
 	// Use this for initialization
 	void Start () {
 		wasPickedUp = false;

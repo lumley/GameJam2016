@@ -13,12 +13,18 @@ public class MovePlayer : MonoBehaviour {
     private int playerNumber;
 	private bool wasPickedUp = false;
 	private bool goSlower = false;
+	GameObject item;
+	Collider2D itemCollider;
+
+	public KeyCode DropButton;
 
 	// Use this for initialization
 	void Start () {
         playerNumber = GetComponent<Player>().playerId;
 	    playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+		wasPickedUp = false;
+
     }
 	
 	// Update is called once per frame
@@ -37,7 +43,23 @@ public class MovePlayer : MonoBehaviour {
         //playerRigidbody.AddForce(movement);
 
         setAnimation(movement);
+
+		if(wasPickedUp)
+		{
+			item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+0.7f, gameObject.transform.position.z);
+		}
+
+		if(Input.GetKeyDown(DropButton) && wasPickedUp){
+			DropItem();
+		}
     }
+
+	void DropItem() {
+		item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+		wasPickedUp = false;
+		goSlower = false;
+		item.GetComponent<PickableItems>().IsPicked = false;
+	}
 
     void setAnimation(Vector3 movement) {
         
@@ -63,20 +85,38 @@ public class MovePlayer : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		// When the player picks up the item it is placed over his head
-		if (other.gameObject.CompareTag ("Pick Up") && !wasPickedUp)
+
+		GameObject somethingOnTheWay = other.gameObject;
+
+		if (somethingOnTheWay.CompareTag ("Pick Up") && !wasPickedUp && !somethingOnTheWay.GetComponent<PickableItems>().IsPicked)
 		{
+			item = somethingOnTheWay;
 			goSlower = true;
 			wasPickedUp=true;
-		} 
+
+			item.GetComponent<PickableItems>().IsPicked = true;
+
+		}
+
+		if (IsMyHome(somethingOnTheWay)) {
+			DropItem();
+		}
 	}
 
+	bool IsMyHome(GameObject gameObject) {
+		// TODO implement it later
+
+		return false;
+	}
+
+	/*
 	void OnTriggerExit2D (Collider2D other) 
 	{
 		// When the player picks up the item it is placed over his head
-		if (other.gameObject.CompareTag ("Pick Up"))
+		if (other.gameObject.CompareTag ("Pick Up") && !wasPickedUp)
 		{
 			goSlower = false;
 			wasPickedUp = false;
 		} 
-	}
+	}*/
 }
