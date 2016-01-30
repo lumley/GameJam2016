@@ -7,12 +7,9 @@ public class ForcePush : MonoBehaviour {
     public int playerNumber;
 
     private Rigidbody2D playerRigidBody;
-    //private CircleCollider2D forceField;
 
 	// Use this for initialization
 	void Start () {
-        //forceField = this.gameObject.GetComponent<CircleCollider2D>();
-        //forceField.isTrigger = true;
         playerRigidBody = GetComponent<Rigidbody2D>();
 	}
 	
