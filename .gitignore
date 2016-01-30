@@ -18,6 +18,10 @@
 *.booproj
 *.svd
 
+# Special VS Code file for Mac developing
+/AAAAYesss/[Pp]lugins/VSCode.cs
+/AAAAYesss/[Pp]lugins/VSCode.cs.meta
+
 
 # Unity3D generated meta files
 *.pidb.meta
