@@ -14,6 +14,7 @@ GameObject:
   - 50: {fileID: 5013278}
   - 61: {fileID: 6165306}
   - 114: {fileID: 11412776}
+  - 114: {fileID: 11491050}
   m_Layer: 0
   m_Name: Cyan witch
   m_TagString: player1
@@ -108,6 +109,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   speed: 9
+--- !u!114 &11491050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5e84e1a6b2b524f9c7519a50d1357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  strength: 1
+  playerNumber: 1
 --- !u!212 &21294260
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -148,6 +163,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: strength
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

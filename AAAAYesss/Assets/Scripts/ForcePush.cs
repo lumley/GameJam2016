@@ -16,7 +16,8 @@ public class ForcePush : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         string playerIdentifier = "player" + playerNumber;
-        if (Input.GetAxis(playerIdentifier + "Submit") > 0)
+        Debug.Log(Input.GetButton(playerIdentifier + "Submit"));
+        if (Input.GetButtonDown(playerIdentifier + "Submit"))
         {
             for(int i = 1; i <= 4; i++)
             {
