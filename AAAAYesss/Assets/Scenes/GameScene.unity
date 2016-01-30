@@ -1434,7 +1434,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_IsActive
@@ -1444,6 +1444,10 @@ Prefab:
       propertyPath: gameObjectToSpawn
       value: 
       objectReference: {fileID: 197194, guid: 9eb81f9b97053724dbeeec5228648b93, type: 2}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: sparePlayerWithId
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -1769,7 +1773,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_IsActive
@@ -1779,6 +1783,14 @@ Prefab:
       propertyPath: gameObjectToSpawn
       value: 
       objectReference: {fileID: 124726, guid: 165d71c926849f74e8c0eed49c6d618d, type: 2}
+    - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: sparePlayerWithId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -2248,7 +2260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.10000001
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_LocalScale.z
@@ -2264,7 +2276,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_IsActive
@@ -2274,6 +2286,10 @@ Prefab:
       propertyPath: gameObjectToSpawn
       value: 
       objectReference: {fileID: 126336, guid: 19b017d80d778fd41bc823e1630f1076, type: 2}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: sparePlayerWithId
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -2384,7 +2400,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.10000002
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_LocalScale.z
@@ -2400,7 +2416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_IsActive
@@ -2410,6 +2426,10 @@ Prefab:
       propertyPath: gameObjectToSpawn
       value: 
       objectReference: {fileID: 138146, guid: 1075f5df7eab2f841963665496b78369, type: 2}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: sparePlayerWithId
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0

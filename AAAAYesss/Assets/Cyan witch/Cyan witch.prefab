@@ -44,7 +44,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 124726}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 1000000
   m_AngularDrag: 1000000
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed51f3264af714f45bb7122b34d8036d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnTimeInSeconds: 7
   playerId: 1
 --- !u!114 &11491050
 MonoBehaviour:
@@ -134,8 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 2
   strength: 1
-  cooldown: 100
-  drainSpeed: 10
 --- !u!212 &21294260
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,28 +201,8 @@ Prefab:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_LinearDrag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Layer
+      propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Radius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: cooldown
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: drainSpeed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

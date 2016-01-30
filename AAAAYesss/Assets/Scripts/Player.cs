@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Player : MonoBehaviour {
+    
+    public static float PLAYER_SPAWNING_DEPTH = -0.3f;
+    public float respawnTimeInSeconds = 7.0f;
     
     public int playerId;
 
@@ -12,10 +14,10 @@ public class Player : MonoBehaviour {
         gameObject.SetActive(false);
         
         // Animate spawning point
-        // Wait X seconds
-        
-        // Respawn
-        Invoke("RespawnOnStart", 2.0f);
+
+
+        // Respawn in X seconds
+        Invoke("RespawnOnStart", respawnTimeInSeconds);
         
     }
     
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour {
         
         var spawningPoint = GameObject.FindGameObjectWithTag("spawnPoint" + playerId);
         
-        this.transform.position = spawningPoint.transform.position;
+        this.transform.position = spawningPoint.transform.position + new Vector3(0, 0, PLAYER_SPAWNING_DEPTH);
         gameObject.SetActive(true);
     }
 }
