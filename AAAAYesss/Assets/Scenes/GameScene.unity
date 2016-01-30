@@ -688,6 +688,18 @@ Prefab:
       propertyPath: m_Name
       value: SpawningPoint4
       objectReference: {fileID: 0}
+    - target: {fileID: 5866804, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -870,6 +882,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1374977922}
+  - 114: {fileID: 1374977923}
   m_Layer: 0
   m_Name: SpawningPoints
   m_TagString: Untagged
@@ -893,6 +906,17 @@ Transform:
   - {fileID: 1297733588}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1374977923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1374977921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6dae0224158f4e128ab87b3a5563dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1376836959
 Prefab:
   m_ObjectHideFlags: 0
@@ -933,17 +957,21 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
-      propertyPath: m_TagString
-      value: spawnPoint1
-      objectReference: {fileID: 0}
-    - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.100000024
-      objectReference: {fileID: 0}
-    - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_Name
       value: SpawningPoint1
       objectReference: {fileID: 0}
+    - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462368, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: gameObjectToSpawn
+      value: 
+      objectReference: {fileID: 124726, guid: 165d71c926849f74e8c0eed49c6d618d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -1286,6 +1314,18 @@ Prefab:
       propertyPath: m_Name
       value: SpawningPoint3
       objectReference: {fileID: 0}
+    - target: {fileID: 5866804, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -1348,6 +1388,22 @@ Prefab:
       propertyPath: m_Name
       value: SpawningPoint2
       objectReference: {fileID: 0}
+    - target: {fileID: 5866804, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390486, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462368, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: gameObjectToSpawn
+      value: 
+      objectReference: {fileID: 138146, guid: 1075f5df7eab2f841963665496b78369, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
