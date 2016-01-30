@@ -8,6 +8,11 @@ TagManager:
   - spawnPoint2
   - spawnPoint3
   - spawnPoint4
+  - Lava
+  - player1
+  - player2
+  - player3
+  - player4
   layers:
   - Default
   - TransparentFX
