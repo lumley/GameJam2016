@@ -21,7 +21,7 @@ public class MovePlayer : MonoBehaviour {
         string playerIdentifier = "player" + playerNumber;
         var movement = new Vector3(Input.GetAxisRaw(playerIdentifier + "Horizontal"), Input.GetAxisRaw(playerIdentifier + "Vertical"));
         
-        movement = movement.normalized * speed * Time.deltaTime;
+        movement = movement * speed * Time.deltaTime;
 
         playerRigidbody.MovePosition (transform.position + movement);
         //playerRigidbody.AddForce(movement);
