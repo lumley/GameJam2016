@@ -16,10 +16,10 @@ public class ForcePush : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         string playerIdentifier = "player" + playerNumber;
         Debug.Log(Input.GetButton(playerIdentifier + "Submit"));
-        if (Input.GetButtonDown(playerIdentifier + "Submit"))
+        if (Input.GetButton(playerIdentifier + "Submit"))
         {
             for(int i = 1; i <= 4; i++)
             {
@@ -35,13 +35,16 @@ public class ForcePush : MonoBehaviour {
         if (target != null)
         {
             Vector2 direction = target.transform.position - transform.position;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, range);
+            direction.Normalize();
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, range, player + 7);
             if (hit.collider != null)
             {
                 Rigidbody2D targetRigidBody = target.GetComponent<Rigidbody2D>();
-                if(targetRigidBody != null)
+                //Rigidbody2D targetRigidBody = hit.rigidbody;
+                if (targetRigidBody != null)
                 {
-                    targetRigidBody.AddForce(direction * strength, ForceMode2D.Impulse);
+                    Vector3 direction3d = new Vector3(direction.x, direction.y);
+                    targetRigidBody.MovePosition((target.transform.position + direction3d) * strength);
                 }
             }
         }
