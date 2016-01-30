@@ -13,6 +13,7 @@ TagManager:
   - player2
   - player3
   - player4
+  - Pick Up
   layers:
   - Default
   - TransparentFX
@@ -22,10 +23,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - player1
+  - player2
+  - player3
+  - player4
   - 
   - 
   - 

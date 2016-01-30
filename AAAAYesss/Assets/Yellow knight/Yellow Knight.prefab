@@ -108,8 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5e84e1a6b2b524f9c7519a50d1357a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 200
-  strength: 20
+  range: 2
+  strength: 1
+  cooldown: 100
+  drainSpeed: 10
 --- !u!114 &11455840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,14 +195,34 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: range
-      value: 200
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: strength
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LinearDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cooldown
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: drainSpeed
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
