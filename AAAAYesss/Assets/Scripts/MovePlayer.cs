@@ -13,7 +13,7 @@ public class MovePlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    playerRigidbody = GetComponent<Rigidbody2D>();
-        playerAnimator = this.gameObject.GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
