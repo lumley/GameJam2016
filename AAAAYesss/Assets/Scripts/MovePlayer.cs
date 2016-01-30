@@ -15,6 +15,7 @@ public class MovePlayer : MonoBehaviour {
 	private bool goSlower = false;
 	GameObject item;
 	Collider2D itemCollider;
+	private string homeName;
 
 	public KeyCode DropButton;
 
@@ -24,7 +25,7 @@ public class MovePlayer : MonoBehaviour {
 	    playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
 		wasPickedUp = false;
-
+		homeName = "spawnPoint" + playerNumber;
     }
 	
 	// Update is called once per frame
@@ -98,15 +99,32 @@ public class MovePlayer : MonoBehaviour {
 
 		}
 
-		if (IsMyHome(somethingOnTheWay)) {
+		/*if (IsMyHome(somethingOnTheWay)) 
+		{
 			DropItem();
-		}
+			CheckVictoryConditions();
+		}*/
 	}
 
 	bool IsMyHome(GameObject gameObject) {
-		// TODO implement it later
 
-		return false;
+		if (homeName != null) 
+		{
+			return gameObject.CompareTag( homeName );
+		}
+		else
+		{
+			return false;
+		}
+
+	}
+		
+
+	private void CheckVictoryConditions()
+	{
+		GameObject home = GameObject.FindGameObjectWithTag( homeName );
+
+	
 	}
 
 	/*
