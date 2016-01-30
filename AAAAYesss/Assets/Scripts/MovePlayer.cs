@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Player))]
 public class MovePlayer : MonoBehaviour {
 
-    public int playerNumber;
     public float speed = 5.0f;
     
     private Rigidbody2D playerRigidbody;
 
     private Animator playerAnimator;
+    
+    private int playerNumber;
 
 	// Use this for initialization
 	void Start () {
+        playerNumber = GetComponent<Player>().playerId;
 	    playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
     }

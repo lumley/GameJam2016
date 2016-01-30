@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Player))]
 public class ForcePush : MonoBehaviour {
     public float range;
     public float strength;
-    public int playerNumber;
+    private int playerNumber;
 
     private Rigidbody2D playerRigidBody;
 
 	// Use this for initialization
 	void Start () {
+        playerNumber = GetComponent<Player>().playerId;
         playerRigidBody = GetComponent<Rigidbody2D>();
 	}
 	
