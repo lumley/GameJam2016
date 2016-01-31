@@ -23,6 +23,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &136472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 481968}
+  - 108: {fileID: 10895968}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &406294
 Transform:
   m_ObjectHideFlags: 1
@@ -32,8 +48,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
-  m_Children: []
+  m_Children:
+  - {fileID: 481968}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &481968
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.20000002, y: 0.20000002, z: 0.20000002}
+  m_Children: []
+  m_Father: {fileID: 406294}
   m_RootOrder: 0
 --- !u!50 &5013278
 Rigidbody2D:
@@ -83,6 +112,39 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!108 &10895968
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136472}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 0.3455882, g: 1, b: 1, a: 1}
+  m_Intensity: 0.75
+  m_Range: 20
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!111 &11108698
 Animation:
   m_ObjectHideFlags: 1
@@ -108,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c183cb7424091c4c98798b80377fa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
+  maxSpeed: 10
+  minSpeed: 5
   DropButton: 0
 --- !u!114 &11440102
 MonoBehaviour:
@@ -121,7 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed51f3264af714f45bb7122b34d8036d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTimeInSeconds: 7
   playerId: 1
 --- !u!114 &11491050
 MonoBehaviour:
