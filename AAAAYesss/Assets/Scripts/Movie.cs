@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Movie : MonoBehaviour {
 
 	Image myImageComponent;
@@ -26,53 +28,38 @@ public class Movie : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if(Input.GetKeyUp(KeyCode.RightArrow))
+		if(Input.GetKeyUp(KeyCode.RightArrow) ||
+			Input.GetKeyUp(KeyCode.JoystickButton0))
 		{
+			Debug.Log("hey");
 			countPage = countPage+1;
-			if(countPage==0){
-				myImageComponent.sprite = image1;
-			} else if(countPage==1){
-				myImageComponent.sprite = image2;
-			} else if(countPage==2){
-				myImageComponent.sprite = image3;
-			} else if(countPage==3){
-				myImageComponent.sprite = image4;
-			} else if(countPage==4){
-				myImageComponent.sprite = image5;
-			} else if(countPage==5){
-				myImageComponent.sprite = image6;
-			} else if(countPage==6){
-				myImageComponent.sprite = image7;
-			} else if(countPage==7){
-				myImageComponent.sprite = image8;
-			} else if(countPage==8){
-				//GAME STARTS
-			}
 		}
-		if(Input.GetKeyUp(KeyCode.LeftArrow))
+		if(Input.GetKeyUp(KeyCode.LeftArrow) ||
+			Input.GetKeyUp(KeyCode.JoystickButton1))
 		{
 			countPage = countPage-1;
-			if(countPage==0){
-				myImageComponent.sprite = image1;
-			} else if(countPage==1){
-				myImageComponent.sprite = image2;
-			} else if(countPage==2){
-				myImageComponent.sprite = image3;
-			} else if(countPage==3){
-				myImageComponent.sprite = image4;
-			} else if(countPage==4){
-				myImageComponent.sprite = image5;
-			} else if(countPage==5){
-				myImageComponent.sprite = image6;
-			} else if(countPage==6){
-				myImageComponent.sprite = image7;
-			} else if(countPage==7){
-				myImageComponent.sprite = image8;
-			} else if(countPage==8){
-				//GAME STARTS
-			}
 		}
 
+		if(countPage==0){
+			myImageComponent.sprite = image1;
+		} else if(countPage==1){
+			myImageComponent.sprite = image2;
+		} else if(countPage==2){
+			myImageComponent.sprite = image3;
+		} else if(countPage==3){
+			myImageComponent.sprite = image4;
+		} else if(countPage==4){
+			myImageComponent.sprite = image5;
+		} else if(countPage==5){
+			myImageComponent.sprite = image6;
+		} else if(countPage==6){
+			myImageComponent.sprite = image7;
+		} else if(countPage==7){
+			myImageComponent.sprite = image8;
+		} else if(countPage==8){
+			//GAME STARTS
+			SceneManager.LoadScene("MainScene");
+		}
 
 	}
 
