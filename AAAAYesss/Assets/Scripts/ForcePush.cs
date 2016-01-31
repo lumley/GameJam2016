@@ -9,6 +9,7 @@ public class ForcePush : MonoBehaviour
     public float strength;
     public int cooldown; //Cooldown in frames
     public int drainSpeed; //Drain speed per frame
+    public GameObject forcePushAnim;
 
     private int playerNumber;
     private int cooldownCounter;
@@ -29,7 +30,6 @@ public class ForcePush : MonoBehaviour
     void FixedUpdate()
     {
         string playerIdentifier = "player" + playerNumber;
-        //Debug.Log(Input.GetButton(playerIdentifier + "Submit"));
         if (cooldownCounter == cooldown)
             isRecharging = false;
         if (Input.GetButton(playerIdentifier + "Submit"))
@@ -42,7 +42,10 @@ public class ForcePush : MonoBehaviour
         else
         {
             if (cooldownCounter < cooldown)
+            {
                 isRecharging = true;
+                playForceAnimation(false);
+            }
         }
 
         if (cooldownCounter < cooldown)
@@ -60,7 +63,6 @@ public class ForcePush : MonoBehaviour
     {
         if (cooldownCounter > 0)
         {
-            Debug.Log("playercount " + playerCount);
             for (int i = 1; i <= playerCount; i++)
             {
                 if (!(i == playerNumber))
@@ -74,10 +76,15 @@ public class ForcePush : MonoBehaviour
             {
                 cooldownCounter = 0;
                 isRecharging = true;
-
+                playForceAnimation(false);
             }
         }
 
+    }
+
+    void playForceAnimation(Boolean playing)
+    {
+        forcePushAnim.SetActive(playing);
     }
 
     void forceField(int player)
@@ -91,12 +98,9 @@ public class ForcePush : MonoBehaviour
             float magnitude = direction.magnitude;
             if (magnitude <= range && targetBody != null)
             {
-                Debug.Log("Ranger " + playerNumber + player);
                 direction3d.Normalize();
-                Vector3 test = target.transform.position + (direction3d * strength);
-                targetBody.MovePosition(test);
-                if (target.transform.position == test)
-                    Debug.Log("Succesful pushed");
+                playForceAnimation(true);
+                targetBody.MovePosition(target.transform.position + (direction3d * strength));
             }
 
         }
