@@ -7,11 +7,12 @@ public class ForcePush : MonoBehaviour
 {
     public float range;
     public float strength;
-    public int cooldown; //Cooldown in frames
-    public int drainSpeed; //Drain speed per frame
+    public int cooldown = 100; //Cooldown in frames
+    public int drainSpeed = 1; //Drain speed per frame
 
     private int playerNumber;
     private int cooldownCounter;
+
     private int playerCount;
     private bool isRecharging;
     
