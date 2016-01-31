@@ -1208,7 +1208,7 @@ Transform:
   m_GameObject: {fileID: 1043649165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0, z: -1}
-  m_LocalScale: {x: 0.01, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1276357571}
   m_RootOrder: 2
@@ -2076,6 +2076,33 @@ Transform:
   - {fileID: 1251574782}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1539449559 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 199322, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+  m_PrefabInternal: {fileID: 123590524}
+--- !u!114 &1539449560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539449559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c10c936e1fc246e2a9703ecdee43499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsToSpawn:
+  - {fileID: 190708, guid: 3457ab03ad6f09d43a73ba7101de4d86, type: 2}
+  - {fileID: 115578, guid: 438213ad60baec34ba35803699c4b2ee, type: 2}
+  - {fileID: 186560, guid: 4a28e787fee65a945a4144e0c8276993, type: 2}
+  - {fileID: 103212, guid: 551712193d2dd5c4f94fade7ca28436b, type: 2}
+  - {fileID: 118108, guid: 5e5a310e4d382724e8648c6af2e840f8, type: 2}
+  - {fileID: 194934, guid: 6b4948d0acb542047a0e7b1e855cb709, type: 2}
+  - {fileID: 126922, guid: 70698bad3a149d942a2d07606ae76dc4, type: 2}
+  - {fileID: 110974, guid: 9ba6288f86a74e844bb3de359d4cf0a5, type: 2}
+  - {fileID: 176464, guid: 9bd24e6d530ae3e4d93a501e1fbd9189, type: 2}
+  - {fileID: 169358, guid: b7af48b85f8b94646bd8afa49b120619, type: 2}
+  - {fileID: 173416, guid: e2d6e24993dc2f647a0a99e2d1cafcd2, type: 2}
 --- !u!1 &1583483263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2129,7 @@ Transform:
   m_GameObject: {fileID: 1583483263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: -1}
-  m_LocalScale: {x: 0.01, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1276357571}
   m_RootOrder: 3

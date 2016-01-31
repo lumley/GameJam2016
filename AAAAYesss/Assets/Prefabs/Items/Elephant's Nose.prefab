@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6183328}
   - 114: {fileID: 11404912}
   m_Layer: 0
-  m_Name: Banana
+  m_Name: Elephant's Nose
   m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPicked: 0
-  ItemType: 7
+  ItemType: 0
 --- !u!212 &21277344
 SpriteRenderer:
   m_ObjectHideFlags: 1

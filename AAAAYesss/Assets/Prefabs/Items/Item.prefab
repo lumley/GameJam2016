@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPicked: 0
+  ItemType: 0
 --- !u!222 &22252014
 CanvasRenderer:
   m_ObjectHideFlags: 1
