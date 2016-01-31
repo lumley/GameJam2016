@@ -12,7 +12,15 @@ public class MovePlayer : MonoBehaviour {
 
     private Animator playerAnimator;
     
-    private int playerNumber;
+	private int _innerPlayerNumber;
+	private int playerNumber {
+		get {
+			if(_innerPlayerNumber == 0){
+				_innerPlayerNumber = GetComponent<Player>().playerId;
+			}
+			return _innerPlayerNumber;
+		}
+	}
 	private bool wasPickedUp = false;
 	private bool shouldGoSlower = false;
 	GameObject item;
@@ -22,11 +30,10 @@ public class MovePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        playerNumber = GetComponent<Player>().playerId;
+		Debug.Log(playerNumber);
 	    playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
 		wasPickedUp = false;
-
     }
 	
 	// Update is called once per frame
@@ -66,11 +73,17 @@ public class MovePlayer : MonoBehaviour {
         }
     }
 
-    void DropItem() {
-		item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-		wasPickedUp = false;
-		shouldGoSlower = false;
-		item.GetComponent<PickableItems>().IsPicked = false;
+
+
+	void DropItem() {
+
+		if ( item != null)
+		{
+			item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+			wasPickedUp = false;
+			shouldGoSlower = false;
+			item.GetComponent<PickableItems>().IsPicked = false;
+		}
 	}
 
     void setAnimation(Vector3 movement) {
@@ -110,15 +123,30 @@ public class MovePlayer : MonoBehaviour {
 
 		}
 
-		if (IsMyHome(somethingOnTheWay)) {
+		if (IsMyHome(somethingOnTheWay)) 
+		{
 			DropItem();
+			//CheckVictoryConditions();
 		}
 	}
 
-	bool IsMyHome(GameObject gameObject) {
-		// TODO implement it later
+	string HomeName()
+	{
+		return "spawnPoint" + playerNumber;
+	}
 
-		return false;
+	bool IsMyHome(GameObject gameObject) {
+
+		return gameObject.CompareTag( HomeName() );
+
+	}
+		
+
+	private void CheckVictoryConditions()
+	{
+		GameObject home = GameObject.FindGameObjectWithTag( HomeName() );
+
+	
 	}
 
 	/*

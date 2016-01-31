@@ -10,6 +10,8 @@ public class PickableItems : MonoBehaviour {
 
 	public bool IsPicked;
 
+	public ItemType ItemType;
+
 	// Use this for initialization
 	void Start () {
 		wasPickedUp = false;
