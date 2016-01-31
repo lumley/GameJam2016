@@ -8,11 +8,25 @@ public class ItemPool : MonoBehaviour {
     private int objectToSpawnIndex;
     private Collider2D colliderComponent;
     
+    private GameObject endingAnimation;
+    
     void Start(){
         colliderComponent = GetComponent<Collider2D>();
         objectToSpawnIndex = gameObjectsToSpawn.Length - 1;
         Shuffle(gameObjectsToSpawn);
         InvokeRepeating("InvokeItem", initialSpawnDelaySeconds, spawnSpeedInSeconds);
+        
+        endingAnimation = GameObject.FindGameObjectWithTag("endingAnimation");
+        if(endingAnimation != null){
+            endingAnimation.SetActive(false);
+        }
+    }
+    
+    public void PlayEndingAnimation(){
+        if(endingAnimation != null){
+            endingAnimation.SetActive(true);
+            endingAnimation.transform.position = transform.position + new Vector3(0, 0, -0.4f);
+        }
     }
     
     public static void Shuffle<T>(T[] list)  

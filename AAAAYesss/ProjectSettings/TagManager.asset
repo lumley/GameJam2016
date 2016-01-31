@@ -20,6 +20,7 @@ TagManager:
   - death3
   - death4
   - soundManager
+  - endingAnimation
   layers:
   - Default
   - TransparentFX

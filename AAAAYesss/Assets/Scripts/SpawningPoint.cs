@@ -116,16 +116,21 @@ public class SpawningPoint : MonoBehaviour {
             
             var itemPool = GameObject.FindGameObjectWithTag("itemPool");
             if(itemPool != null){
+                itemPool.GetComponent<ItemPool>().PlayEndingAnimation();
                 itemPool.SetActive(false);
             }
             
-            var winner = (GameObject)Instantiate( gameObjectToSpawn, new Vector3(), Quaternion.identity);
+            Invoke("WinnerSequence", 4.0f);
+        }
+    }
+    
+    public void WinnerSequence(){
+        var winner = (GameObject)Instantiate( gameObjectToSpawn, transform.position + new Vector3(0, 0, -0.5f), Quaternion.identity);
             winner.GetComponent<MovePlayer>().enabled = false;
             winner.GetComponent<ForcePush>().enabled = false;
             winner.transform.localScale = new Vector3(12, 12, 12);
             
-            Invoke("InvokeNextScene", 5.0f);
-        }
+            Invoke("InvokeNextScene", 4.0f);
     }
     
     public void InvokeNextScene(){
