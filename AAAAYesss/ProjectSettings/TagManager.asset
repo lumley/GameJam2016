@@ -15,6 +15,10 @@ TagManager:
   - player4
   - item
   - itemPool
+  - death1
+  - death2
+  - death3
+  - death4
   layers:
   - Default
   - TransparentFX
