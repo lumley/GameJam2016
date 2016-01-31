@@ -21,7 +21,7 @@ public class SpawningPoint : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 
-		if (other.gameObject.CompareTag ("Pick Up"))
+		if (other.gameObject.CompareTag ("item"))
 		{
 			
 		}
@@ -31,7 +31,7 @@ public class SpawningPoint : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) 
 	{
 
-		if (other.gameObject.CompareTag ("Pick Up"))
+		if (other.gameObject.CompareTag ("item"))
 		{
 
 		}

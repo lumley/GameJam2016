@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Player : MonoBehaviour {
     
@@ -9,6 +8,7 @@ public class Player : MonoBehaviour {
 
 	public void KillPlayer(){
         // Drop item
+        GetComponent<MovePlayer>().DropItem();
         
         // Disappear
         gameObject.SetActive(false);

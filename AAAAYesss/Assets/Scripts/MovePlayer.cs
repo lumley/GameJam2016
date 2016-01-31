@@ -2,7 +2,8 @@
 
 [RequireComponent(typeof(Player))]
 public class MovePlayer : MonoBehaviour {
-    
+    private const string ITEM_TAG = "item";
+    private const string CANCEL_BUTTON = "Cancel";
     public float maxSpeed = 10.0f;
     public float minSpeed = 5.0f;
     
@@ -12,28 +13,17 @@ public class MovePlayer : MonoBehaviour {
 
     private Animator playerAnimator;
     
-	private int _innerPlayerNumber;
-	private int playerNumber {
-		get {
-			if(_innerPlayerNumber == 0){
-				_innerPlayerNumber = GetComponent<Player>().playerId;
-			}
-			return _innerPlayerNumber;
-		}
-	}
-	private bool wasPickedUp = false;
-	private bool shouldGoSlower = false;
-	GameObject item;
-	Collider2D itemCollider;
-
-	public KeyCode DropButton;
+	private int playerNumber;
+    
+    private string lastCarryingItemName = "";
+    
+	private GameObject carryingItem;
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log(playerNumber);
+        playerNumber = GetComponent<Player>().playerId;
 	    playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-		wasPickedUp = false;
     }
 	
 	// Update is called once per frame
@@ -50,12 +40,13 @@ public class MovePlayer : MonoBehaviour {
 
         setAnimation(movement);
 
-        if (wasPickedUp)
+        var currentItem = carryingItem;
+        if (currentItem != null)
         {
-            item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.7f, gameObject.transform.position.z);
+            currentItem.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.7f, gameObject.transform.position.z);
         }
 
-        if (Input.GetKeyDown(DropButton) && wasPickedUp)
+        if (Input.GetButton(playerIdentifier + CANCEL_BUTTON) && currentItem != null)
         {
             DropItem();
         }
@@ -63,27 +54,17 @@ public class MovePlayer : MonoBehaviour {
 
     private void AdjustPlayerSpeed()
     {
-        if (shouldGoSlower)
-        {
-            speed = minSpeed;
-        }
-        else
-        {
-            speed = maxSpeed;
-        }
+        speed = carryingItem != null ? minSpeed : maxSpeed;
     }
 
-
-
-	void DropItem() {
-
-		if ( item != null)
-		{
-			item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-			wasPickedUp = false;
-			shouldGoSlower = false;
-			item.GetComponent<PickableItems>().IsPicked = false;
-		}
+	public void DropItem() {
+        var currentItem = carryingItem;
+        if(currentItem != null){
+            lastCarryingItemName = currentItem.name;
+            currentItem.transform.position = gameObject.transform.position;
+            currentItem.GetComponent<Collider2D>().enabled = true;
+        }
+        carryingItem = null;
 	}
 
     void setAnimation(Vector3 movement) {
@@ -109,54 +90,14 @@ public class MovePlayer : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		// When the player picks up the item it is placed over his head
-
-		GameObject somethingOnTheWay = other.gameObject;
-
-		if (somethingOnTheWay.CompareTag ("Pick Up") && !wasPickedUp && !somethingOnTheWay.GetComponent<PickableItems>().IsPicked)
+		if (other.gameObject.CompareTag(ITEM_TAG) && carryingItem == null)
 		{
-			item = somethingOnTheWay;
-			shouldGoSlower = true;
-			wasPickedUp=true;
-
-			item.GetComponent<PickableItems>().IsPicked = true;
-
-		}
-
-		if (IsMyHome(somethingOnTheWay)) 
-		{
-			DropItem();
-			//CheckVictoryConditions();
+            if(other.name.Equals(lastCarryingItemName)){
+                lastCarryingItemName = "";
+            }else{
+                other.GetComponent<Collider2D>().enabled = false;
+                carryingItem = other.gameObject;
+            }
 		}
 	}
-
-	string HomeName()
-	{
-		return "spawnPoint" + playerNumber;
-	}
-
-	bool IsMyHome(GameObject gameObject) {
-
-		return gameObject.CompareTag( HomeName() );
-
-	}
-		
-
-	private void CheckVictoryConditions()
-	{
-		GameObject home = GameObject.FindGameObjectWithTag( HomeName() );
-
-	
-	}
-
-	/*
-	void OnTriggerExit2D (Collider2D other) 
-	{
-		// When the player picks up the item it is placed over his head
-		if (other.gameObject.CompareTag ("Pick Up") && !wasPickedUp)
-		{
-			goSlower = false;
-			wasPickedUp = false;
-		} 
-	}*/
 }

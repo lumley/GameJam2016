@@ -93,6 +93,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 421226, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -125,6 +129,50 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 126922, guid: 70698bad3a149d942a2d07606ae76dc4, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[10]
+      value: 
+      objectReference: {fileID: 173416, guid: e2d6e24993dc2f647a0a99e2d1cafcd2, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 190708, guid: 3457ab03ad6f09d43a73ba7101de4d86, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 115578, guid: 438213ad60baec34ba35803699c4b2ee, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 186560, guid: 4a28e787fee65a945a4144e0c8276993, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 103212, guid: 551712193d2dd5c4f94fade7ca28436b, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 118108, guid: 5e5a310e4d382724e8648c6af2e840f8, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[6]
+      value: 
+      objectReference: {fileID: 110974, guid: 9ba6288f86a74e844bb3de359d4cf0a5, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[7]
+      value: 
+      objectReference: {fileID: 176464, guid: 9bd24e6d530ae3e4d93a501e1fbd9189, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[8]
+      value: 
+      objectReference: {fileID: 169358, guid: b7af48b85f8b94646bd8afa49b120619, type: 2}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: gameObjectsToSpawn.Array.data[9]
+      value: 
+      objectReference: {fileID: 173416, guid: e2d6e24993dc2f647a0a99e2d1cafcd2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
   m_IsPrefabParent: 0

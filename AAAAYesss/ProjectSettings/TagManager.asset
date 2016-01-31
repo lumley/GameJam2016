@@ -13,7 +13,7 @@ TagManager:
   - player2
   - player3
   - player4
-  - Pick Up
+  - item
   layers:
   - Default
   - TransparentFX
