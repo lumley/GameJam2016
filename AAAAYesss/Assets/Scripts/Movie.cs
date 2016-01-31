@@ -21,15 +21,16 @@ public class Movie : MonoBehaviour {
 		countPage = 0;
 		myImageComponent = GetComponent<Image>(); //Our image component is the one attached to this gameObject.
 		myImageComponent.sprite = image1;
+		RectTransform rt = GetComponent<RectTransform>();
+		rt.sizeDelta = new Vector2( Screen.width, Screen.height);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
-		if(Input.GetKeyUp(KeyCode.RightArrow) ||
+		if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.Space) ||
 			Input.GetKeyUp(KeyCode.JoystickButton0))
 		{
-			Debug.Log("hey");
 			countPage = countPage+1;
 		}
 		if(Input.GetKeyUp(KeyCode.LeftArrow) ||
