@@ -24,6 +24,10 @@ public class Player : MonoBehaviour {
         deathObject.transform.position = transform.position;
         deathObject.SetActive(true);
         
+        var gameSoundManager = GameObject.FindGameObjectWithTag(GameSoundManager.TAG);
+        if(gameSoundManager != null){
+            gameSoundManager.GetComponent<GameSoundManager>().PlayDeathSound();
+        }
         
         // Disappear
         gameObject.SetActive(false);

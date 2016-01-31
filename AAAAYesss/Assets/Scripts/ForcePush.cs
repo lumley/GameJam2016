@@ -73,6 +73,13 @@ public class ForcePush : MonoBehaviour
     {
         if (cooldownCounter > 0)
         {
+            if(cooldownCounter >= cooldown){
+                var soundManager = GameObject.FindGameObjectWithTag(GameSoundManager.TAG);
+                if(soundManager != null){
+                    soundManager.GetComponent<GameSoundManager>().PlayAttackSoundForPlayer(playerNumber);
+                }
+            }
+            
             for (int i = 1; i <= playerCount; i++)
             {
                 if (!(i == playerNumber))

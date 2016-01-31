@@ -19,6 +19,7 @@ TagManager:
   - death2
   - death3
   - death4
+  - soundManager
   layers:
   - Default
   - TransparentFX
