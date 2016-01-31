@@ -15,9 +15,12 @@ TagManager:
   - player4
   - item
   - itemPool
-  - button2
-  - button3
-  - button4
+  - death1
+  - death2
+  - death3
+  - death4
+  - soundManager
+  - endingAnimation
   layers:
   - Default
   - TransparentFX
@@ -54,4 +57,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstacles
+    uniqueID: 4054591297
     locked: 0
