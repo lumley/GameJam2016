@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(Player))]
 public class MovePlayer : MonoBehaviour {
-
-    public float speed = 5.0f;
+    
+    public float maxSpeed = 10.0f;
+    public float minSpeed = 5.0f;
+    
+    private float speed;
     
     private Rigidbody2D playerRigidbody;
 
@@ -12,7 +14,7 @@ public class MovePlayer : MonoBehaviour {
     
     private int playerNumber;
 	private bool wasPickedUp = false;
-	private bool goSlower = false;
+	private bool shouldGoSlower = false;
 	GameObject item;
 	Collider2D itemCollider;
 
@@ -28,36 +30,46 @@ public class MovePlayer : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         string playerIdentifier = "player" + playerNumber;
         var movement = new Vector3(Input.GetAxisRaw(playerIdentifier + "Horizontal"), Input.GetAxisRaw(playerIdentifier + "Vertical"));
-        
-		if(goSlower){
-			speed=3.0f;
-		} else {
-			speed = 5.0f;
-		}
+
+        AdjustPlayerSpeed();
         movement = movement * speed * Time.deltaTime;
 
-        playerRigidbody.MovePosition (transform.position + movement);
+        playerRigidbody.MovePosition(transform.position + movement);
         //playerRigidbody.AddForce(movement);
 
         setAnimation(movement);
 
-		if(wasPickedUp)
-		{
-			item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+0.7f, gameObject.transform.position.z);
-		}
+        if (wasPickedUp)
+        {
+            item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.7f, gameObject.transform.position.z);
+        }
 
-		if(Input.GetKeyDown(DropButton) && wasPickedUp){
-			DropItem();
-		}
+        if (Input.GetKeyDown(DropButton) && wasPickedUp)
+        {
+            DropItem();
+        }
     }
 
-	void DropItem() {
+    private void AdjustPlayerSpeed()
+    {
+        if (shouldGoSlower)
+        {
+            speed = minSpeed;
+        }
+        else
+        {
+            speed = maxSpeed;
+        }
+    }
+
+    void DropItem() {
 		item.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 		wasPickedUp = false;
-		goSlower = false;
+		shouldGoSlower = false;
 		item.GetComponent<PickableItems>().IsPicked = false;
 	}
 
@@ -91,7 +103,7 @@ public class MovePlayer : MonoBehaviour {
 		if (somethingOnTheWay.CompareTag ("Pick Up") && !wasPickedUp && !somethingOnTheWay.GetComponent<PickableItems>().IsPicked)
 		{
 			item = somethingOnTheWay;
-			goSlower = true;
+			shouldGoSlower = true;
 			wasPickedUp=true;
 
 			item.GetComponent<PickableItems>().IsPicked = true;

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c183cb7424091c4c98798b80377fa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
+  speed: 14
   DropButton: 0
 --- !u!212 &21288226
 SpriteRenderer:
