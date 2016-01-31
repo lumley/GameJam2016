@@ -9,7 +9,20 @@ public class ItemPool : MonoBehaviour {
     void Start(){
         colliderComponent = GetComponent<Collider2D>();
         objectToSpawnIndex = gameObjectsToSpawn.Length - 1;
+        Shuffle(gameObjectsToSpawn);
         InvokeRepeating("InvokeItem", 5.0f, 15.0f);
+    }
+    
+    public static void Shuffle<T>(T[] list)  
+    {  
+        int n = list.Length;  
+        while (n > 1) {  
+            n--;  
+            int k = Random.Range(0, n + 1);  
+            T value = list[k];  
+            list[k] = list[n];  
+            list[n] = value;  
+        }  
     }
 	
 	private void InvokeItem(){

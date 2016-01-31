@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(Player))]
 public class MovePlayer : MonoBehaviour {
@@ -63,9 +64,19 @@ public class MovePlayer : MonoBehaviour {
             lastCarryingItemName = currentItem.name;
             currentItem.transform.position = gameObject.transform.position;
             currentItem.GetComponent<Collider2D>().enabled = true;
+            
+            TellMySpawnPointAboutTheItem(currentItem);
         }
         carryingItem = null;
 	}
+
+    private void TellMySpawnPointAboutTheItem(GameObject currentItem)
+    {
+        var spawningPoint = GameObject.FindGameObjectWithTag(SpawningPoint.BASE_TAG + playerNumber);
+        if(spawningPoint != null){
+            spawningPoint.GetComponent<SpawningPoint>().DroppedItem(currentItem);
+        }
+    }
 
     void setAnimation(Vector3 movement) {
         
@@ -94,10 +105,28 @@ public class MovePlayer : MonoBehaviour {
 		{
             if(other.name.Equals(lastCarryingItemName)){
                 lastCarryingItemName = "";
-            }else{
-                other.GetComponent<Collider2D>().enabled = false;
-                carryingItem = other.gameObject;
+            }else
+            {
+                PickUpItem(other);
             }
-		}
+        }
 	}
+
+    private void PickUpItem(Collider2D other)
+    {
+        TellAllSpawningPointsAboutPickingAnItem(other.gameObject);
+        
+        other.GetComponent<Collider2D>().enabled = false;
+        carryingItem = other.gameObject;
+    }
+
+    private void TellAllSpawningPointsAboutPickingAnItem(GameObject gameObject)
+    {
+        for (int i=0; i< 4; ++i){
+            var spawningPoint = GameObject.FindGameObjectWithTag(SpawningPoint.BASE_TAG+(i+1));
+            if(spawningPoint != null){
+                spawningPoint.GetComponent<SpawningPoint>().PickedUpItem(gameObject);
+            }
+        }
+    }
 }

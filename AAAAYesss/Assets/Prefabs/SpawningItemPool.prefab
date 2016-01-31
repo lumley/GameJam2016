@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11407898}
   m_Layer: 0
   m_Name: SpawningItemPool
-  m_TagString: Untagged
+  m_TagString: itemPool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,6 @@ MonoBehaviour:
   - {fileID: 186560, guid: 4a28e787fee65a945a4144e0c8276993, type: 2}
   - {fileID: 103212, guid: 551712193d2dd5c4f94fade7ca28436b, type: 2}
   - {fileID: 118108, guid: 5e5a310e4d382724e8648c6af2e840f8, type: 2}
-  - {fileID: 194934, guid: 6b4948d0acb542047a0e7b1e855cb709, type: 2}
   - {fileID: 126922, guid: 70698bad3a149d942a2d07606ae76dc4, type: 2}
   - {fileID: 110974, guid: 9ba6288f86a74e844bb3de359d4cf0a5, type: 2}
   - {fileID: 176464, guid: 9bd24e6d530ae3e4d93a501e1fbd9189, type: 2}

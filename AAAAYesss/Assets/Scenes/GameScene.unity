@@ -173,6 +173,10 @@ Prefab:
       propertyPath: gameObjectsToSpawn.Array.data[9]
       value: 
       objectReference: {fileID: 173416, guid: e2d6e24993dc2f647a0a99e2d1cafcd2, type: 2}
+    - target: {fileID: 199322, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: m_TagString
+      value: itemPool
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
   m_IsPrefabParent: 0
