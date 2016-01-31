@@ -14,6 +14,8 @@ public class ForcePush : MonoBehaviour
     private int cooldownCounter;
     private int playerCount;
     private bool isRecharging;
+    
+    private GameObject forcePushObject;
 
     // Use this for initialization
     void Start()
@@ -23,6 +25,15 @@ public class ForcePush : MonoBehaviour
         cooldownCounter = cooldown;
         var gameManager = GameManager.Instance;
         playerCount = gameManager != null ? gameManager.PlayerCount : 2;
+        
+        for(int i=0; i<transform.childCount; ++i){
+            var child = transform.GetChild(i).gameObject;
+            if(child.name.Contains("Force")){
+                forcePushObject = child;
+                break;
+            }
+        }
+        
     }
 
     // Update is called once per frame
@@ -41,6 +52,7 @@ public class ForcePush : MonoBehaviour
         }
         else
         {
+            forcePushObject.SetActive(false);
             if (cooldownCounter < cooldown)
                 isRecharging = true;
         }
@@ -60,21 +72,22 @@ public class ForcePush : MonoBehaviour
     {
         if (cooldownCounter > 0)
         {
-            Debug.Log("playercount " + playerCount);
             for (int i = 1; i <= playerCount; i++)
             {
                 if (!(i == playerNumber))
                     forceField(i);
             }
+            
             if (cooldownCounter >= drainSpeed)
             {
+                forcePushObject.SetActive(true);
                 cooldownCounter -= drainSpeed;
             }
             else
             {
                 cooldownCounter = 0;
                 isRecharging = true;
-
+                forcePushObject.SetActive(false);
             }
         }
 
