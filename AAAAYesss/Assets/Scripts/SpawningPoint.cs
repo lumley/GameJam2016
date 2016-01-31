@@ -107,7 +107,28 @@ public class SpawningPoint : MonoBehaviour {
         }
         
         if(areAllItemsCollected){
-            SceneManager.LoadScene("MainScene");
+            for (int i=0; i<4; ++i){
+                var spawnPoint = GameObject.FindGameObjectWithTag(BASE_TAG + (i+1));
+                if(spawnPoint != null){
+                    spawnPoint.SetActive(false);
+                }
+            }
+            
+            var itemPool = GameObject.FindGameObjectWithTag("itemPool");
+            if(itemPool != null){
+                itemPool.SetActive(false);
+            }
+            
+            var winner = (GameObject)Instantiate( gameObjectToSpawn, new Vector3(), Quaternion.identity);
+            winner.GetComponent<MovePlayer>().enabled = false;
+            winner.GetComponent<ForcePush>().enabled = false;
+            winner.transform.localScale = new Vector3(12, 12, 12);
+            
+            Invoke("InvokeNextScene", 5.0f);
         }
+    }
+    
+    public void InvokeNextScene(){
+        SceneManager.LoadScene("MainScene");
     }
 }

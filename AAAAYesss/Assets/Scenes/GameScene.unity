@@ -168,6 +168,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: initialSpawnDelaySeconds
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
   m_IsPrefabParent: 0
@@ -2433,6 +2437,10 @@ Prefab:
     - target: {fileID: 410662, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_LocalScale.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462368, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: objectsToCollectCount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3373646, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
