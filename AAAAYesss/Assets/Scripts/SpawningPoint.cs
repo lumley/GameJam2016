@@ -23,7 +23,7 @@ public class SpawningPoint : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Pick Up"))
 		{
-			ItemType type = other.gameObject.GetComponent<PickableItems>().ItemType;
+			
 		}
 
 	}
