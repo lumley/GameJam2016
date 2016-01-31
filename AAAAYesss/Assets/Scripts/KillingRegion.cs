@@ -12,6 +12,7 @@ public class KillingRegion : MonoBehaviour
 
     private float[] collidingPlayerValueArray = new float[4];
     private bool[] isPlayerCollidingArray = new bool[4];
+    private GameObject[] playerColliding = new GameObject[4];
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +22,7 @@ public class KillingRegion : MonoBehaviour
             if (playerScript.playerId != sparePlayerWithId && !isPlayerCollidingArray[playerScript.playerId - 1])
             {
                 isPlayerCollidingArray[playerScript.playerId - 1] = true;
+                playerColliding[playerScript.playerId - 1] = other.gameObject;
             }
         }
     }
@@ -33,10 +35,14 @@ public class KillingRegion : MonoBehaviour
             if (isPlayerCollidingArray[i])
             {
                 collidingPlayerValueArray[i] += deltaTime;
-                if(collidingPlayerValueArray[i] > secondsToKill){
-                    isPlayerCollidingArray[i] = false;
-                    collidingPlayerValueArray[i] = 0;
-                    
+                playerColliding[i].GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, collidingPlayerValueArray[i] / secondsToKill);
+                bool shouldDie = collidingPlayerValueArray[i] > secondsToKill;
+                if(shouldDie || !playerColliding[i].activeSelf)
+                {
+                    StopTrackingPlayer(i);
+                }
+                
+                if (shouldDie){
                     var dyingTarget = GameObject.FindGameObjectWithTag(COLLIDING_TAG + (i + 1));
                     if(dyingTarget != null){
                         var playerScript = dyingTarget.GetComponent<Player>();
@@ -47,13 +53,22 @@ public class KillingRegion : MonoBehaviour
         }
     }
 
+    private void StopTrackingPlayer(int i)
+    {
+        isPlayerCollidingArray[i] = false;
+        collidingPlayerValueArray[i] = 0;
+        var player = playerColliding[i];
+        if(player != null){
+            player.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag.StartsWith(COLLIDING_TAG))
         {
             var playerScript = other.GetComponent<Player>();
-            isPlayerCollidingArray[playerScript.playerId - 1] = false;
-            collidingPlayerValueArray[playerScript.playerId - 1] = 0;
+            StopTrackingPlayer(playerScript.playerId - 1);
         }
     }
 }
