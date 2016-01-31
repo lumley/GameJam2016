@@ -22,7 +22,7 @@ public class Movie : MonoBehaviour {
 		myImageComponent = GetComponent<Image>(); //Our image component is the one attached to this gameObject.
 		myImageComponent.sprite = image1;
 		RectTransform rt = GetComponent<RectTransform>();
-		rt.sizeDelta = new Vector2( Screen.width, Screen.height);
+		//rt.sizeDelta = new Vector2( Screen.width, Screen.height);
 	}
 	
 	// Update is called once per frame
