@@ -125,6 +125,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11407898, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: spawnSpeedInSeconds
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416378, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
+      propertyPath: secondsToKill
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f8bdc322f2a2450cb4c4d0c0dcd689f, type: 2}
   m_IsPrefabParent: 0
@@ -1571,6 +1579,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: secondsToKill
+      value: 2.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -1925,6 +1937,10 @@ Prefab:
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: secondsToKill
+      value: 2.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
@@ -2449,6 +2465,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: secondsToKill
+      value: 2.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
   m_IsPrefabParent: 0
@@ -2596,6 +2616,10 @@ Prefab:
     - target: {fileID: 150744, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453956, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}
+      propertyPath: secondsToKill
+      value: 2.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 755eba348e4044a6eba2f48dda07d552, type: 2}

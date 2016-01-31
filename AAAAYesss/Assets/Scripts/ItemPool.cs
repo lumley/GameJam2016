@@ -2,6 +2,8 @@
 
 public class ItemPool : MonoBehaviour {
     
+    public float spawnSpeedInSeconds = 15.0f;
+    public float initialSpawnDelaySeconds = 5.0f;
     public GameObject[] gameObjectsToSpawn;
     private int objectToSpawnIndex;
     private Collider2D colliderComponent;
@@ -10,7 +12,7 @@ public class ItemPool : MonoBehaviour {
         colliderComponent = GetComponent<Collider2D>();
         objectToSpawnIndex = gameObjectsToSpawn.Length - 1;
         Shuffle(gameObjectsToSpawn);
-        InvokeRepeating("InvokeItem", 5.0f, 15.0f);
+        InvokeRepeating("InvokeItem", initialSpawnDelaySeconds, spawnSpeedInSeconds);
     }
     
     public static void Shuffle<T>(T[] list)  
@@ -36,7 +38,7 @@ public class ItemPool : MonoBehaviour {
 
         --objectToSpawnIndex; 
         
-        if(objectToSpawnIndex <= 0){
+        if(objectToSpawnIndex < 0){
             objectToSpawnIndex = gameObjectsToSpawn.Length - 1;
             CancelInvoke();
         }
